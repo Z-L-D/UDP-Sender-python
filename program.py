@@ -1,9 +1,9 @@
 import socket
 
-UDP_IP = "127.0.0.1"
-UDP_PORT = 5500
-MESSAGE = b"Hello, World!"
+command = b"Hello from Python"
+address = "127.0.0.1"
+port = 5500
 
-sock = socket.socket(socket.AF_INET, # Internet
-                     socket.SOCK_DGRAM) # UDP
-sock.sendto(MESSAGE, (UDP_IP, UDP_PORT))
+socket_object = socket.socket(socket.AF_INET,
+                     socket.SOCK_DGRAM)
+socket_object.sendto(command, (address, port))
